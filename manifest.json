@@ -1,0 +1,25 @@
+{
+  "name": "Audi KPI Tree v3",
+  "organization": "FLOWER AGENCE",
+  "description": "Audi brand performance KPI Tree — 5 pillars, 9 sub-categories, 29 KPIs with 3 visual variants (standard / primary / strategic). Pixel-accurate dark premium design.",
+  "logoUrl": "https://flowerelon.github.io/audi-kpi-viz/logo.png",
+  "organizationUrl": "https://studioflower.fr",
+  "supportUrl": "https://studioflower.fr",
+  "privacyPolicyUrl": "https://studioflower.fr/privacy",
+  "termsOfServiceUrl": "https://studioflower.fr/terms",
+  "packageUrl": "https://flowerelon.github.io/audi-kpi-viz/",
+  "devMode": true,
+  "components": [
+    {
+      "id": "audiKpiTreeV3",
+      "name": "Audi KPI Tree v3",
+      "description": "Brand Performance dashboard with North Star, Executive Summary, 5 Pillars and 29 KPI cards.",
+      "iconUrl": "https://flowerelon.github.io/audi-kpi-viz/icon.png",
+      "resource": {
+        "js": "https://flowerelon.github.io/audi-kpi-viz/viz.js",
+        "config": "https://flowerelon.github.io/audi-kpi-viz/index.json",
+        "css": "https://flowerelon.github.io/audi-kpi-viz/viz.css"
+      }
+    }
+  ]
+}

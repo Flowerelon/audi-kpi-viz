@@ -1,0 +1,175 @@
+{
+  "data": [
+    {
+      "id": "kpiFields",
+      "label": "KPI source fields",
+      "elements": [
+        {
+          "id": "pillar_id",
+          "label": "Pillar ID (1-5)",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "pillar_name",
+          "label": "Pillar Name",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "sub_category",
+          "label": "Sub-category",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "kpi_name",
+          "label": "KPI Name",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "variant",
+          "label": "Variant (standard / primary / strategic)",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "unit",
+          "label": "Unit",
+          "type": "DIMENSION",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "id": "period",
+          "label": "Period (e.g. Q2-2026)",
+          "type": "DIMENSION",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "id": "source",
+          "label": "Source",
+          "type": "DIMENSION",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "id": "value",
+          "label": "Value (current period)",
+          "type": "METRIC",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "value_previous",
+          "label": "Value (previous period for delta)",
+          "type": "METRIC",
+          "options": { "min": 0, "max": 1 }
+        }
+      ]
+    },
+    {
+      "id": "executiveScores",
+      "label": "Executive Summary (5 pillar scores)",
+      "elements": [
+        {
+          "id": "exec_pillar",
+          "label": "Pillar (Aspiration, Conversations, ...)",
+          "type": "DIMENSION",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "id": "exec_score",
+          "label": "Score (/10)",
+          "type": "METRIC",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "id": "exec_delta",
+          "label": "Delta vs previous quarter",
+          "type": "METRIC",
+          "options": { "min": 0, "max": 1 }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "brandColors",
+      "label": "Brand colors",
+      "elements": [
+        {
+          "id": "accentColor",
+          "label": "Audi Red (accent)",
+          "type": "FILL_COLOR",
+          "defaultValue": { "color": "#F50537" }
+        },
+        {
+          "id": "primaryVariantColor",
+          "label": "Primary KPI border",
+          "type": "FILL_COLOR",
+          "defaultValue": { "color": "#3FA9F5" }
+        },
+        {
+          "id": "backgroundColor",
+          "label": "Page background",
+          "type": "FILL_COLOR",
+          "defaultValue": { "color": "#000000" }
+        },
+        {
+          "id": "cardColor",
+          "label": "Card background",
+          "type": "FILL_COLOR",
+          "defaultValue": { "color": "#0E0E0E" }
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "label": "Text labels",
+      "elements": [
+        {
+          "id": "title",
+          "label": "Title",
+          "type": "TEXTINPUT",
+          "defaultValue": "KPI Tree v3"
+        },
+        {
+          "id": "supTitle",
+          "label": "Suprascript",
+          "type": "TEXTINPUT",
+          "defaultValue": "Brand Performance"
+        },
+        {
+          "id": "period",
+          "label": "Period label",
+          "type": "TEXTINPUT",
+          "defaultValue": "Q2 2026"
+        },
+        {
+          "id": "northStar",
+          "label": "North Star statement",
+          "type": "TEXTINPUT",
+          "defaultValue": "Make Audi the most desirable brand in premium mobility."
+        },
+        {
+          "id": "northStarHighlight",
+          "label": "North Star highlight word",
+          "type": "TEXTINPUT",
+          "defaultValue": "desirable"
+        },
+        {
+          "id": "footerLeft",
+          "label": "Footer left",
+          "type": "TEXTINPUT",
+          "defaultValue": "Audi France · BBDO · KPI Tree v3"
+        },
+        {
+          "id": "footerRight",
+          "label": "Footer right",
+          "type": "TEXTINPUT",
+          "defaultValue": "Source: Brand Tracker · GA4 · Social Listening · CRM"
+        }
+      ]
+    }
+  ],
+  "interactions": []
+}
