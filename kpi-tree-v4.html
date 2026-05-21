@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Audi — KPI Tree v4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #000000;
+    --card-outer: #2A2A2A;
+    --card-inner: #1F1F1F;
+    --card-inner-border: #2F2F2F;
+    --text: #FFFFFF;
+    --text-dim: #9CA3AF;
+    --text-faint: #6B7280;
+    --green: #4ADE80;
+    --red: #F87171;
+    --font: 'Inter', system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 48px 56px 64px;
+  }
+
+  /* ─────── TITRE TOP ─────── */
+  .page-title {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0 0 40px 0;
+    letter-spacing: -0.01em;
+  }
+
+  /* ─────── HEADER ROW: 5 pillar cards ─────── */
+  .pillar-headers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-bottom: 56px;
+  }
+  .pillar-header-card {
+    background: var(--card-outer);
+    border-radius: 8px;
+    padding: 20px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .pillar-header-card .pillar-name {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .pillar-header-card .pillar-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: center;
+    line-height: 1.5;
+    margin-top: auto;
+  }
+
+  /* ─────── KPI CARD (inner) ─────── */
+  .kpi-card {
+    background: var(--card-inner);
+    border: 1px solid var(--card-inner-border);
+    border-radius: 6px;
+    padding: 16px 12px 14px;
+    text-align: center;
+  }
+  .kpi-card .label {
+    font-size: 12px;
+    color: var(--text-dim);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .kpi-card .value {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .kpi-card .delta {
+    font-size: 10px;
+    color: var(--red);
+    margin-top: 6px;
+    font-weight: 400;
+  }
+  .kpi-card .delta .vs {
+    color: var(--text-faint);
+    margin-left: 2px;
+  }
+
+  /* ─────── PILLAR SECTION ─────── */
+  .pillar {
+    margin-bottom: 40px;
+  }
+  .pillar-row-head {
+    display: flex;
+    align-items: baseline;
+    gap: 28px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .pillar-row-head h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .pillar-row-head .subcat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .pillar-row-head .score {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .pillar-row-head .score.green { color: var(--green); }
+  .pillar-row-head .score.red { color: var(--red); }
+
+  .sub-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+
+  /* ─────── RESPONSIVE ─────── */
+  @media (max-width: 1280px) {
+    .pillar-headers,
+    .sub-cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 720px) {
+    .pillar-headers,
+    .sub-cards-grid {
+      grid-template-columns: 1fr;
+    }
+    .pillar-row-head h2 { font-size: 22px; }
+    .page-title { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ───── TITRE TOP ───── -->
+  <h1 class="page-title">Make Audi the most desirable brand in premium mobility.</h1>
+
+  <!-- ───── HEADER ROW : 5 pillar cards ───── -->
+  <div class="pillar-headers">
+
+    <div class="pillar-header-card">
+      <div class="pillar-name">A brand that inspires Aspiration</div>
+      <div class="kpi-card">
+        <div class="label">Share of Market</div>
+        <div class="value">5,2%</div>
+        <div class="delta">-4,7% <span class="vs">vs. N-1</span></div>
+      </div>
+      <div class="pillar-desc">Captures attention and fuels imagination.</div>
+    </div>
+
+    <div class="pillar-header-card">
+      <div class="pillar-name">A brand that drives Conversations</div>
+      <div class="kpi-card">
+        <div class="label">Share of Market</div>
+        <div class="value">5,2%</div>
+        <div class="delta">-4,7% <span class="vs">vs. N-1</span></div>
+      </div>
+      <div class="pillar-desc">Becomes a reference, widely discussed and shared.</div>
+    </div>
+
+    <div class="pillar-header-card">
+      <div class="pillar-name">A brand that influences Choice</div>
+      <div class="kpi-card">
+        <div class="label">Share of Market</div>
+        <div class="value">5,2%</div>
+        <div class="delta">-4,7% <span class="vs">vs. N-1</span></div>
+      </div>
+      <div class="pillar-desc">Emerges as the spontaneous answer.</div>
+    </div>
+
+    <div class="pillar-header-card">
+      <div class="pillar-name">A brand that drives Purchase</div>
+      <div class="kpi-card">
+        <div class="label">Share of Market</div>
+        <div class="value">5,2%</div>
+        <div class="delta">-4,7% <span class="vs">vs. N-1</span></div>
+      </div>
+      <div class="pillar-desc">Generates leads, intent and conversion.</div>
+    </div>
+
+    <div class="pillar-header-card">
+      <div class="pillar-name">A brand that fosters Loyalty</div>
+      <div class="kpi-card">
+        <div class="label">Share of Market</div>
+        <div class="value">5,2%</div>
+        <div class="delta">-4,7% <span class="vs">vs. N-1</span></div>
+      </div>
+      <div class="pillar-desc">Nurtures long-term preference.</div>
+    </div>
+
+  </div>
+
+  <!-- ───── PILLAR 1 — Aspiration ───── -->
+  <section class="pillar">
+    <div class="pillar-row-head">
+      <h2>A brand that inspires Aspiration</h2>
+      <div class="subcat">Distinctiveness <span class="score green">8/10</span></div>
+    </div>
+    <div class="sub-cards-grid">
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+    </div>
+  </section>
+
+  <!-- ───── PILLAR 2 — Conversations ───── -->
+  <section class="pillar">
+    <div class="pillar-row-head">
+      <h2>A brand that drives conversations</h2>
+      <div class="subcat">Distinctiveness <span class="score red">8/10</span></div>
+    </div>
+    <div class="sub-cards-grid">
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+    </div>
+  </section>
+
+  <!-- ───── PILLAR 3 — Choice ───── -->
+  <section class="pillar">
+    <div class="pillar-row-head">
+      <h2>A brand that influences choice</h2>
+      <div class="subcat">Distinctiveness <span class="score green">8/10</span></div>
+    </div>
+    <div class="sub-cards-grid">
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+    </div>
+  </section>
+
+  <!-- ───── PILLAR 4 — Purchase ───── -->
+  <section class="pillar">
+    <div class="pillar-row-head">
+      <h2>A brand that drives purchase</h2>
+      <div class="subcat">Distinctiveness <span class="score green">8/10</span></div>
+    </div>
+    <div class="sub-cards-grid">
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+    </div>
+  </section>
+
+  <!-- ───── PILLAR 5 — Loyalty ───── -->
+  <section class="pillar">
+    <div class="pillar-row-head">
+      <h2>A brand that fosters loyalty</h2>
+      <div class="subcat">Distinctiveness <span class="score green">8/10</span></div>
+    </div>
+    <div class="sub-cards-grid">
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+      <div class="kpi-card"><div class="label">Share of Market</div><div class="value">5,2%</div><div class="delta">-4,7% <span class="vs">vs. N-1</span></div></div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
